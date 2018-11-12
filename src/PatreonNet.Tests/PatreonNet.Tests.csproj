@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Campaign.json" />
+    <None Remove="Resources\Identity.json" />
+    <None Remove="Resources\Member.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Campaign.json" />
+    <EmbeddedResource Include="Resources\Identity.json" />
+    <EmbeddedResource Include="Resources\Member.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonApiSerializer" Version="1.5.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PatreonNet\PatreonNet.csproj" />
+  </ItemGroup>
+
+</Project>

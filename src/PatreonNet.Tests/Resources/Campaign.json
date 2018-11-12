@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "created_at": "2018-05-04T23:34:08+00:00",
+        "creation_name": "online communities",
+        "discord_server_id": "1234567890",
+        "google_analytics_id": "1234567890",
+        "has_rss": true,
+        "has_sent_rss_notify": true,
+        "image_small_url": "https://example.url",
+        "image_url": "https://example.url",
+        "is_charged_immediately": false,
+        "is_monthly": false,
+        "is_nsfw": false,
+        "main_video_embed": null,
+        "main_video_url": "https://example.url",
+        "one_liner": null,
+        "patron_count": 2,
+        "pay_per_name": "creation",
+        "pledge_url": "/bePatron?c=1234560",
+        "published_at": "2018-05-09T17:12:01+00:00",
+        "rss_artwork_url": "https://example.url",
+        "rss_feed_title": "My custom feed",
+        "summary": "Putting the internet to work for creators.",
+        "thanks_embed": null,
+        "thanks_msg": null,
+        "thanks_video_url": null
+      },
+      "id": "1234560",
+      "type": "campaign"
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 1
+    }
+  }
+}

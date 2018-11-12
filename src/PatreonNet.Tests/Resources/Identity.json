@@ -1,0 +1,28 @@
+{
+  "data": {
+    "attributes": {
+      "about": "A Patreon Platform User",
+      "created": "2018-04-01T00:36:26+00:00",
+      "email": "platform@patreon.com",
+      "first_name": "Platform",
+      "full_name": "Platform Team",
+      "image_url": "https://url.example",
+      "last_name": "Platform",
+      "social_connections": {
+        "deviantart": null,
+        "discord": null,
+        "facebook": null,
+        "reddit": null,
+        "spotify": null,
+        "twitch": null,
+        "twitter": { "user_id": "12345" },
+        "youtube": null
+      },
+      "thumb_url": "https://url.example",
+      "url": "https://www.patreon.com/example",
+      "vanity": "platform"
+    },
+    "id": "12345",
+    "type": "user",
+  },
+}

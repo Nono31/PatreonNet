@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatreonNet", "PatreonNet\PatreonNet.csproj", "{B1B4B491-6C70-41E0-B8B8-2086449790AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatreonNet.Tests", "PatreonNet.Tests\PatreonNet.Tests.csproj", "{2BC94F91-222E-4B33-B313-A5A4158E3BEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1B4B491-6C70-41E0-B8B8-2086449790AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B4B491-6C70-41E0-B8B8-2086449790AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B4B491-6C70-41E0-B8B8-2086449790AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B4B491-6C70-41E0-B8B8-2086449790AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC94F91-222E-4B33-B313-A5A4158E3BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC94F91-222E-4B33-B313-A5A4158E3BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC94F91-222E-4B33-B313-A5A4158E3BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC94F91-222E-4B33-B313-A5A4158E3BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1226ED08-B75C-4527-AB2C-1C99EE8DF3CC}
+	EndGlobalSection
+EndGlobal
