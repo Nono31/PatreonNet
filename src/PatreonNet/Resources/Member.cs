@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// The record of a user's membership to a campaign. Remains consistent across months of pledging.
+    /// </summary>
     public class Member : PatreonObject
     {
         /// <summary>
@@ -80,6 +83,8 @@ namespace PatreonNet.Resources
         [JsonProperty(PropertyName = "will_pay_amount_cents")]
         public int WillPayAmountCents { get; set; }
 
+        #region Relationships
+
         /// <summary>
         /// The member's shipping address that they entered for the campaign. Requires the campaign.members.address scope.
         /// </summary>
@@ -96,12 +101,14 @@ namespace PatreonNet.Resources
         /// The tiers that the member is entitled to. This includes a current pledge, or payment that covers the current payment period.
         /// </summary>
         [JsonProperty(PropertyName = "currently_entitled_tiers")]
-        public List<Tier> CurrentlyEntitledTiers { get; set; }
+        public IList<Tier> CurrentlyEntitledTiers { get; set; }
 
         /// <summary>
         /// The user who is pledging to the campaign.
         /// </summary>
         [JsonProperty(PropertyName = "user")]
         public User User { get; set; }
+
+        #endregion
     }
 }

@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// The Patreon user, which can be both patron and creator.
+    /// </summary>
     public class User : PatreonObject
     {
         /// <summary>
@@ -105,5 +108,22 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "social_connections")]
         public object SocialConnections { get; set; }
+
+        #region Relationships
+
+        /// <summary>
+        /// Usually a zero or one-element array with the user's membership to the token creator's campaign, if they are a member.
+        /// With the identity.memberships scope, this returns memberships to ALL campaigns the user is a member of.
+        /// </summary>
+        [JsonProperty(PropertyName = "memberships")]
+        public IList<Member> Memberships { get; set; }
+
+        /// <summary>
+        /// Campaign
+        /// </summary>
+        [JsonProperty(PropertyName = "campaign")]
+        public Campaign Campaign { get; set; }
+
+        #endregion
     }
 }

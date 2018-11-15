@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// A file uploaded to patreon.com, usually an image.
+    /// </summary>
     public class Media : PatreonObject
     {
         /// <summary>

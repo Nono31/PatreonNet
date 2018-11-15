@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// A membership level on a campaign, which can have benefits attached to it.
+    /// </summary>
     public class Tier : PatreonObject
     {
         /// <summary>
@@ -102,9 +105,32 @@ namespace PatreonNet.Resources
         public DateTimeOffset? PublishedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// Datetime tier was unpublished, while applicable. Can be null.
         /// </summary>
         [JsonProperty(PropertyName = "unpublished_at")]
         public DateTimeOffset? UnpublishedAt { get; set; }
+
+
+        #region Relationships
+
+        /// <summary>
+        /// The campaign the tier belongs to.
+        /// </summary>
+        [JsonProperty(PropertyName = "campaign")]
+        public Campaign Campaign { get; set; }
+
+        /// <summary>
+        /// The image file associated with the tier.
+        /// </summary>
+        [JsonProperty(PropertyName = "tier_image")]
+        public Media TierImage { get; set; }
+
+        /// <summary>
+        /// The benefits attached to the tier, which are used for generating deliverables
+        /// </summary>
+        [JsonProperty(PropertyName = "benefits")]
+        public IList<Benefit> Benefits { get; set; }
+
+        #endregion
     }
 }

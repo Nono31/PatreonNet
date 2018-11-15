@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// The creator's page, and the top-level object for accessing lists of members, tiers, etc.
+    /// </summary>
     public class Campaign : PatreonObject
     {
         /// <summary>
@@ -145,5 +148,33 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "earnings_visibility")]
         public string EarningsVisibility { get; set; }
+
+
+        #region Relationships
+
+        /// <summary>
+        /// Tiers
+        /// </summary>
+        [JsonProperty(PropertyName = "tiers")]
+        public IList<Tier> Tiers { get; set; }
+
+        /// <summary>
+        /// Creator
+        /// </summary>
+        [JsonProperty(PropertyName = "creator")]
+        public User Creator { get; set; }
+
+        /// <summary>
+        /// Benefits
+        /// </summary>
+        [JsonProperty(PropertyName = "benefits")]
+        public IList<Benefit> Benefits { get; set; }
+        /// <summary>
+        /// Goals
+        /// </summary>
+        [JsonProperty(PropertyName = "goals")]
+        public IList<Goal> Goals { get; set; }
+
+        #endregion
     }
 }

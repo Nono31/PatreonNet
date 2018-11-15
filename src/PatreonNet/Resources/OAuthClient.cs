@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// A client created by a developer, used for getting OAuth2 access tokens
+    /// </summary>
     public class OAuthClient : PatreonObject
     {
         /// <summary>
@@ -72,5 +75,22 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "default_scopes")]
         public string DefaultScopes { get; set; }
+
+
+        #region Relationships
+
+        /// <summary>
+        /// User
+        /// </summary>
+        [JsonProperty(PropertyName = "user")]
+        public User User { get; set; }
+
+        /// <summary>
+        /// Campaign
+        /// </summary>
+        [JsonProperty(PropertyName = "campaign")]
+        public Campaign Campaign { get; set; }
+
+        #endregion
     }
 }

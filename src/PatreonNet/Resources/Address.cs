@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// A User's shipping address.
+    /// </summary>
     public class Address : PatreonObject
     {
 
@@ -72,6 +75,20 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "confirmed_at")]
         public DateTimeOffset? ConfirmedAt { get; set; }
+
+        #region Relationships
+        /// <summary>
+        /// User
+        /// </summary>
+        [JsonProperty(PropertyName = "user")]
+        public User User { get; set; }
+
+        /// <summary>
+        /// campaigns
+        /// </summary>
+        [JsonProperty(PropertyName = "campaigns")]
+        public IList<Campaign> Campaigns { get; set; }
+        #endregion
 
     }
 }

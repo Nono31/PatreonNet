@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// The record of whether or not a patron has been delivered the benefitthey are owed because of their member tier.
+    /// </summary>
     public class Deliverable : PatreonObject
     {
         /// <summary>
@@ -25,5 +28,34 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "due_at")]
         public DateTimeOffset? DueAt { get; set; }
+
+
+        #region Relationships
+
+        /// <summary>
+        /// Campaign
+        /// </summary>
+        [JsonProperty(PropertyName = "campaign")]
+        public Campaign Campaign { get; set; }
+
+        /// <summary>
+        /// Benefit
+        /// </summary>
+        [JsonProperty(PropertyName = "benefit")]
+        public Benefit Benefit { get; set; }
+
+        /// <summary>
+        /// The member who has been granted the deliverable.
+        /// </summary>
+        [JsonProperty(PropertyName = "member")]
+        public Member Member { get; set; }
+
+        /// <summary>
+        /// The user who has been granted the deliverable.This user is the same as the member user.
+        /// </summary>
+        [JsonProperty(PropertyName = "user")]
+        public User User { get; set; }
+
+        #endregion
     }
 }

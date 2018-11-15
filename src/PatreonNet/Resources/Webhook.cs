@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// Webhooks are fired based on events happening on a particular campaign.
+    /// </summary>
     public class Webhook : PatreonObject
     {
         /// <summary>
@@ -42,5 +45,21 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "secret")]
         public string Secret { get; set; }
+
+
+        #region Relationships
+
+        /// <summary>
+        /// The client which created the webhook
+        /// </summary>
+        [JsonProperty(PropertyName = "client")]
+        public OAuthClient Client { get; set; }
+
+        /// <summary>
+        /// The campaign whose events trigger the webhook.
+        /// </summary>
+        [JsonProperty(PropertyName = "campaign")]
+        public Campaign Campaign { get; set; }
+        #endregion
     }
 }

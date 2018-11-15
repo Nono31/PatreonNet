@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// A benefit added to the Campaign, which can be added to a tier to be delivered to the patron.
+    /// </summary>
     public class Benefit : PatreonObject
     {
         /// <summary>
@@ -66,5 +69,26 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "is_deleted")]
         public bool IsDeleted { get; set; }
+
+        #region Relationships
+        /// <summary>
+        /// Tiers
+        /// </summary>
+        [JsonProperty(PropertyName = "is_deltierseted")]
+        public IList<Tier> Tiers { get; set; }
+
+        /// <summary>
+        /// Deliverables
+        /// </summary>
+        [JsonProperty(PropertyName = "deliverables")]
+        public IList<Deliverable> Deliverables { get; set; }
+
+        /// <summary>
+        /// Campaign
+        /// </summary>
+        [JsonProperty(PropertyName = "campaign")]
+        public Campaign Campaign { get; set; }
+
+        #endregion
     }
 }

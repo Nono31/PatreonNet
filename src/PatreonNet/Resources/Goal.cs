@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PatreonNet.Resources
 {
+    /// <summary>
+    /// A funding goal in USD set by a creator on a campaign.
+    /// </summary>
     public class Goal : PatreonObject
     {
         /// <summary>
@@ -44,5 +47,16 @@ namespace PatreonNet.Resources
         /// </summary>
         [JsonProperty(PropertyName = "completed_percentage")]
         public int CompletedPercentage { get; set; }
+
+
+        #region Relationships
+
+        /// <summary>
+        /// The campaign trying to reach the goal
+        /// </summary>
+        [JsonProperty(PropertyName = "campaign")]
+        public Campaign Campaign { get; set; }
+
+        #endregion
     }
 }
